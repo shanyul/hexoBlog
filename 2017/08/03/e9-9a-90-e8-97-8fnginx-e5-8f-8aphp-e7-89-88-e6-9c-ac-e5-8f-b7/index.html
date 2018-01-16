@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shanyuliang.com">
-  <title>舢禹的博客</title>
+  <title>隐藏nginx及php版本号 | 舢禹的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
-<meta name="keywords" content="php,mysql,前端,javascript,jquery,html5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="舢禹的博客">
-<meta property="og:url" content="http://shanyuliang.com/index.html">
+  <meta name="description" content="隐藏nginx版本号nginx版本号一般显示在两个地方，①第一个是HTTP header，有个Server:nginx/1.x.x类似会暴露Web服务器所用软件名称以及版本号，这个也是大多数Web服务器最容易暴露版本号的地方；②第二个是Nginx出错页面，比如404页面没有找到等，这是如果用户没有指定页面的话，那么Nginx自己的页面会有版本戳记。接下来我们就做隐藏操作： 1.打开Nginx主配置">
+<meta name="keywords" content="nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隐藏nginx及php版本号">
+<meta property="og:url" content="http://shanyuliang.com/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/index.html">
 <meta property="og:site_name" content="舢禹的博客">
-<meta property="og:description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
+<meta property="og:description" content="隐藏nginx版本号nginx版本号一般显示在两个地方，①第一个是HTTP header，有个Server:nginx/1.x.x类似会暴露Web服务器所用软件名称以及版本号，这个也是大多数Web服务器最容易暴露版本号的地方；②第二个是Nginx出错页面，比如404页面没有找到等，这是如果用户没有指定页面的话，那么Nginx自己的页面会有版本戳记。接下来我们就做隐藏操作： 1.打开Nginx主配置">
+<meta property="og:updated_time" content="2018-01-16T11:59:27.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="舢禹的博客">
-<meta name="twitter:description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
+<meta name="twitter:title" content="隐藏nginx及php版本号">
+<meta name="twitter:description" content="隐藏nginx版本号nginx版本号一般显示在两个地方，①第一个是HTTP header，有个Server:nginx/1.x.x类似会暴露Web服务器所用软件名称以及版本号，这个也是大多数Web服务器最容易暴露版本号的地方；②第二个是Nginx出错页面，比如404页面没有找到等，这是如果用户没有指定页面的话，那么Nginx自己的页面会有版本戳记。接下来我们就做隐藏操作： 1.打开Nginx主配置">
   
     <link rel="alternative" href="/atom.xml" title="舢禹的博客" type="application/atom+xml">
   
@@ -149,1124 +150,81 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/16/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      隐藏nginx及php版本号
     </h1>
   
 
         
-        <a href="/2018/01/16/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-16T07:21:17.235Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-16</time>
+        <a href="/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/" class="archive-article-date">
+  	<time datetime="2017-08-03T03:18:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/16/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-e8-81-8a-e5-a4-a9-e7-b3-bb-e7-bb-9f-e4-bb-a3-e7-a0-81-e6-9f-a5-e7-9c-8b" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/30/e8-81-8a-e5-a4-a9-e7-b3-bb-e7-bb-9f-e4-bb-a3-e7-a0-81-e6-9f-a5-e7-9c-8b/">聊天系统代码详解</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/30/e8-81-8a-e5-a4-a9-e7-b3-bb-e7-bb-9f-e4-bb-a3-e7-a0-81-e6-9f-a5-e7-9c-8b/" class="archive-article-date">
-  	<time datetime="2017-08-30T15:05:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="服务端入口代码"><a href="#服务端入口代码" class="headerlink" title="服务端入口代码"></a><strong>服务端入口代码</strong></h4><blockquote>
-<p>include_once ‘server/WebSocket.php’;</p>
-<p>$webSocket = new \WebIM\WebSocket();</p>
-<p>$webSocket-&gt;run();</p>
-</blockquote>
-<h4 id="服务端主要代码"><a href="#服务端主要代码" class="headerlink" title="服务端主要代码"></a><strong>服务端主要代码</strong></h4><pre>/**
- * Created by PhpStorm.
- * User: ShanyuLiang
- * Date: 2017/8/4
- * Time: 15:49
- */
-namespace WebIM;
-
-use Swoole\WebSocket\Server;
-
-class WebSocket
-{
-    private $server;
-    private $table;
-
-    public function __construct()
-    {
-        $this-&gt;createTable();
-    }
-
-    /**
-     * 启动
-     */
-    public function run()
-    {
-        $this-&gt;server = new Server('0.0.0.0', '9502');
-        $this-&gt;server-&gt;set(
-            array(
-                'daemonize' =&gt; false,      // 是否是守护进程
-                'max_request' =&gt; 100,    // 最大连接数量
-                'worker_num' =&gt; 2,
-                'dispatch_mode' =&gt; 2,
-                'debug_mode'=&gt; 1,
-                // 心跳检测的设置，自动踢掉掉线的fd
-                'heartbeat_check_interval' =&gt; 5,
-                'heartbeat_idle_time' =&gt; 600,
-            )
-        );
-        $this-&gt;server-&gt;on('open', [$this, 'open']);
-        $this-&gt;server-&gt;on('message', [$this, 'message']);
-        $this-&gt;server-&gt;on('close', [$this, 'close']);
-
-        $this-&gt;server-&gt;start();
-    }
-
-    /**
-     * @param Server $server
-     * @param $request
-     */
-    public function open(Server $server, $request)
-    {
-
-    }
-
-    private function allUser()
-    {
-//        $users = [];
-//        foreach ($this-&gt;table as $row) {
-//            $users[] = $row;
-//        }
-//        return $users;
-    }
-
-    /**
-     * @param Server $server
-     * @param $frame
-     */
-    public function message(Server $server, $frame)
-    {
-        $data = json_decode($frame-&gt;data,true);
-        if(is_array($data) &amp;&amp; !empty($data)){
-            if(isset($data['type']) &amp;&amp; $data['type'] == 1){
-                $user = [
-                    'fd'  =&gt; $frame-&gt;fd,
-                    'uid' =&gt; $data['uid'],
-                    'avatar' =&gt; $data['avatar'],
-                    'username' =&gt; $data['username']
-                ];
-                $this-&gt;table-&gt;set($frame-&gt;fd, $user);
-            }else{
-                $this-&gt;pushMessage($server, $data, $frame-&gt;fd);
-            }
-        }
-    }
-
-    /**
-     * @param Server $server
-     * @param $fd
-     */
-    public function close(Server $server, $fd)
-    {
-//        $user = $this-&gt;table-&gt;get($fd);
-        $this-&gt;table-&gt;del($fd);
-        $this-&gt;server-&gt;close($fd);
-    }
-
-    /**
-     * 遍历发送消息
-     *
-     * @param Server $server
-     * @param $message
-     * @param $messageType
-     * @param int $skip
-     */
-    private function pushMessage(Server $server, $message, $frameFd)
-    {
-        if(!empty($message)){
-//            $user = $this-&gt;table-&gt;get($frameFd);
-            if($message['type'] == 'group'){
-                $member = explode(',',$message['member']);
-                foreach ($this-&gt;table as $row) {
-                    if (in_array($row['uid'],$member) &amp;&amp; $frameFd != $row['fd']) {
-                        $server-&gt;push($row['fd'], json_encode([
-                                'id' =&gt; $message['from'],
-                                'username' =&gt; $message['username'],
-                                'content' =&gt; $message['content'],
-                                'avatar' =&gt; $message['avatar'],
-                                'toId'  =&gt; $message['to'],
-                                'type' =&gt;  $message['type'],
-                                'datetime' =&gt; time()*1000
-                            ])
-                        );
-                    }
-                }
-            }else{
-                foreach ($this-&gt;table as $row) {
-                    if ($row['uid'] == $message['to']) {
-                        $server-&gt;push($row['fd'], json_encode([
-                                'id' =&gt; $message['from'],
-                                'username' =&gt; $message['username'],
-                                'content' =&gt; $message['content'],
-                                'avatar' =&gt; $message['avatar'],
-                                'toId'  =&gt; $message['to'],
-                                'type' =&gt;  $message['type'],
-                                'datetime' =&gt; time()*1000
-                            ])
-                        );
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * 创建内存表
-     *swoole_table一个基于共享内存和锁实现的超高性能，并发数据结构。用于解决多进程/多线程数据共享和同步加锁问题。
-     */
-    private function createTable()
-    {
-        $this-&gt;table = new \swoole_table(1024);
-        $this-&gt;table-&gt;column('fd', \swoole_table::TYPE_INT);
-        $this-&gt;table-&gt;column('uid', \swoole_table::TYPE_INT);
-        $this-&gt;table-&gt;column('username', \swoole_table::TYPE_STRING, 255);
-        $this-&gt;table-&gt;column('avatar', \swoole_table::TYPE_STRING, 255);
-        $this-&gt;table-&gt;create();
-    }
-}</pre>
-
-<h4 id="客户端代码"><a href="#客户端代码" class="headerlink" title="客户端代码"></a><strong>客户端代码</strong></h4><pre>/**
- * Created by ShanyuLiang on 2017/8/10.
- */
-layui.use('layim', function(layim){
-    //链接服务端
-    var ws = new WebSocket("ws://127.0.0.0:9502");
-    //先来个客服模式压压精
-    layim.config({
-        init:{
-            url: 'index/getInfo',
-            data:{id:id}
-        },
-        members: {
-            url: 'index/getMember',
-        },
-        //上传图片接口
-        uploadImage: {
-            url: '/index/upPic', //（返回的数据格式见下文）
-            type: 'post' //默认post
-        },
-
-        //上传文件接口
-        uploadFile: {
-            url: '/upload/file', //（返回的数据格式见下文）
-            type: 'post' //默认post
-        },
-
-        tool: [{
-            alias: 'code',
-            title: '代码',
-            icon: '&amp;#xe64e;'
-        }],
-        brief: false, //是否简约模式（如果true则不显示主面板）
-        initSkin: '1.jpg',
-        notice: true,
-        title: '开始聊天',
-        //        skin: ['aaa.jpg']  //皮肤列表
-    });
-
-    //链接成功时触发
-    ws.onopen = function(){
-        var info = '{"type":1,"uid":'+id+',"username":"'+username+'","avatar":"'+avatar+'"}';
-        ws.send(info);
-    };
-
-    //监听发送消息
-    layim.on('sendMessage', function(data){
-        var To = data.to;
-        var from= data.mine;
-        if(To.type === 'friend'){
-            var msg = '{"from":'+from.id+',"content":"'+from.content+'","username":"'+from.username+'","avatar":"'+from.avatar+'"' +
-                ',"to":'+To.id+',"type":"'+To.type+'"}';
-            layim.setChatStatus('&lt;span style="color:#FF5722;"&gt;对方正在输入。。。&lt;/span&gt;');
-        }else{
-            var msg = '{"from":'+from.id+',"content":"'+from.content+'","username":"'+from.username+'","avatar":"'+from.avatar+'"' +
-                ',"to":'+To.id+',"member":"'+To.member+'","type":"'+To.type+'"}';
-        }
-        ws.send(msg);
-    });
-
-    //接收消息
-    ws.onmessage = function(res){
-        var data = JSON.parse(res.data);
-        console.log(data);
-        if(data.type == 'group'){
-            var to = data.toId;
-        }else{
-            var to = data.id;
-        }
-        obj = {
-            username: data.username,
-            avatar: data.avatar,
-            id: to,
-            type: data.type,
-            content: data.content,
-            mine: false,
-            timestamp: data.datetime
-        }
-        layim.getMessage(obj);
-    };
-});</pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">socket</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swoole</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Socket//" class="article-tag-list-link color2">Socket</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/30/e8-81-8a-e5-a4-a9-e7-b3-bb-e7-bb-9f-e4-bb-a3-e7-a0-81-e6-9f-a5-e7-9c-8b/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-workerman-e5-92-8cswoole-e7-9a-84-e5-8c-ba-e5-88-ab" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/30/workerman-e5-92-8cswoole-e7-9a-84-e5-8c-ba-e5-88-ab/">workerman和swoole的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/30/workerman-e5-92-8cswoole-e7-9a-84-e5-8c-ba-e5-88-ab/" class="archive-article-date">
-  	<time datetime="2017-08-30T14:46:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a><strong>区别</strong></h4><p>workerman和swoole都是php socket 服务器框架，都支持长连接、tcp和udp、websocket、异步、分布式部署等</p>
-<p>workerman纯php写的，swoole是php的c扩展，性能肯定更高，百度、腾讯不少产品的server就是基于swoole的</p>
-<p>workerman上手更快，文档更丰富，社区活跃，社区基本做到有问必答。</p>
-<pre id="best-content-2760066671" class="best-text mb-10">性能上Swoole毕竟是C语言开发的，在某些地方如内存管理、数据结构、通信协议解析上肯定要比PHP开发的workerman高。
-功能上swoole提供的高级特性很多，列举几个workerman没有的吧，
-比如SSL/TLS隧道加密、http2.0、异步mysql驱动、异步redis驱动、异步的http/websocket客户端、process、lock、atomic、table。
-另外Swoole 2.0内置了PHP原生协程的支持，PHP代码也可以使用类似于Go语言的协程来实现高并发的网络服务器。
-
-外部依赖上workerman需要依赖很多额外的第三方PHP扩展来实现，局限性比较大，这些扩展并非是PHP官方维护的，维护性方面良莠不齐，
-有些扩展连PHP7都不支持，数年没人维护。而Swoole基本上无依赖，底层的代码全部可控。
-
-开发维护方面，Swoole的开发团队目前有大概18人左右，开发者基本上都是来自腾讯、百度、阿里、滴滴、微博等国内一线互联网企业，支持维护的团队更稳定。
-当然workerman的优势是它完全使用PHP代码实现，开发者可以直接看它的源码。有特殊需求也可以直接改源码来实现。
-如果换成swoole就不是那么简单了。w
-orkerman做的事情更多一些，即是框架又是工具和完整的解决方案，对于没有太多后端编程功底的程序员也来说确实会容易很多。
-而swoole实际上只是一个底层库，不是拿来可用的完整产品，基于swoole有很多PHP的框架和程序，
-比如tsf、zan php framework、hprose-swoole、zphp、swoole/framework、blink、dorarpc、SwooleDistributed等等，普通开发者可以直接基于这些项目进行开发。</pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">socket</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Socket//" class="article-tag-list-link color2">Socket</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/30/workerman-e5-92-8cswoole-e7-9a-84-e5-8c-ba-e5-88-ab/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-websocket-e7-ae-80-e4-bb-8b" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/30/websocket-e7-ae-80-e4-bb-8b/">WebSocket简介</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/30/websocket-e7-ae-80-e4-bb-8b/" class="archive-article-date">
-  	<time datetime="2017-08-30T14:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="什么是websocket？"><a href="#什么是websocket？" class="headerlink" title="什么是websocket？"></a><strong>什么是websocket？</strong></h3><p>WebSocket是HTML5开始提供的一种浏览器与服务器间进行全双工通讯的网络技术。依靠这种技术可以实现客户端和服务器端的长连接，双向实时通信。<br>特点:<br>事件驱动<br>异步<br>使用ws或者wss协议的客户端socket<br>能够实现真正意义上的推送功能</p>
-<p>缺点：<br>少部分浏览器不支持，浏览器支持的程度与方式有区别。</p>
-<h3 id="WebSocket客户端"><a href="#WebSocket客户端" class="headerlink" title="WebSocket客户端"></a><strong>WebSocket客户端</strong></h3><p>websocket允许通过JavaScript建立与远程服务器的连接，从而实现客户端与服务器间双向的通信。在websocket中有两个方法：<br>1、send() 向远程服务器发送数据<br>2、close() 关闭该websocket链接<br>websocket同时还定义了几个监听函数<br>1、onopen 当网络连接建立时触发该事件<br>2、onerror 当网络发生错误时触发该事件<br>3、onclose 当websocket被关闭时触发该事件<br>4、onmessage 当websocket接收到服务器发来的消息的时触发的事件，也是通信中最重要的一个监听事件。msg.data<br>websocket还定义了一个readyState属性，这个属性可以返回websocket所处的状态：<br>1、CONNECTING(0) websocket正尝试与服务器建立连接<br>2、OPEN(1) websocket与服务器已经建立连接<br>3、CLOSING(2) websocket正在关闭与服务器的连接<br>4、CLOSED(3) websocket已经关闭了与服务器的连接</p>
-<p>websocket的url开头是ws，如果需要ssl加密可以使用wss，当我们调用websocket的构造方法构建一个websocket对象（new WebSocket(url)）的之后，就可以进行即时通信了。</p>
-<h3 id="WebSocket服务器端"><a href="#WebSocket服务器端" class="headerlink" title="WebSocket服务器端"></a>WebSocket服务器端</h3><p><strong> </strong>在PHP中，client与server之间建立socket通信，首先在PHP中创建socket并监听端口信息，代码如下：</p>
-<p>&nbsp;</p>
-<blockquote>
-<p><span class="variable dollar-sign">$</span><span class="variable">serv</span> <span class="keyword operator">=</span> <span class="keyword new">new</span> <span class="support class">Swoole</span>\<span class="support class">Websocket</span>\<span class="support class">Server</span>(<span class="string">“127.0.0.1”</span>, <span class="constant">9502</span>);</p>
-<pre><code>&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;serv&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;function call&quot;&gt;on&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&apos;Open&apos;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;server&lt;/span&gt;, &lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;req&lt;/span&gt;) {
-
-    &lt;span class=&quot;support&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;connection open: &quot;&lt;/span&gt;&lt;span class=&quot;keyword dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;fd;
-
-});
-
-
-&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;serv&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;function call&quot;&gt;on&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&apos;Message&apos;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;server&lt;/span&gt;, &lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;frame&lt;/span&gt;) {
-
-    &lt;span class=&quot;support&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;message: &quot;&lt;/span&gt;&lt;span class=&quot;keyword dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;data;
-
-    &lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;function call&quot;&gt;push&lt;/span&gt;(&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;fd, &lt;span class=&quot;function call&quot;&gt;json_encode&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;hello&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;world&quot;&lt;/span&gt;]));
-
-});
-
-
-&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;serv&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;function call&quot;&gt;on&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&apos;Close&apos;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;server&lt;/span&gt;, &lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;fd&lt;/span&gt;) {
-
-    &lt;span class=&quot;support&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;connection close: &quot;&lt;/span&gt;&lt;span class=&quot;keyword dot&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;fd&lt;/span&gt;;
-
-});
-
-
-&lt;span class=&quot;variable dollar-sign&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;serv&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;keyword operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;function call&quot;&gt;start&lt;/span&gt;();
-</code></pre></blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/php/日常随笔//" class="article-tag-list-link color5">日常随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/30/websocket-e7-ae-80-e4-bb-8b/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-e7-bd-91-e7-bb-9c-e7-bc-96-e7-a8-8b-e4-bb-8b-e7-bb-8d" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/29/e7-bd-91-e7-bb-9c-e7-bc-96-e7-a8-8b-e4-bb-8b-e7-bb-8d/">网络编程初识</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/29/e7-bd-91-e7-bb-9c-e7-bc-96-e7-a8-8b-e4-bb-8b-e7-bb-8d/" class="archive-article-date">
-  	<time datetime="2017-08-29T04:07:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>网络编程是什么?</strong></p>
-<p>网络编程的本质是两个设备之间的数据交换，当然，在计算机网络中，设备主要指计算机。数据传递本身没有多大的难度，不就是把一个设备中的数据发送给两外一个设备，然后接受另外一个设备反馈的数据。</p>
-<p>现在的网络编程基本上都是基于请求/响应方式的，也就是一个设备发送请求数据给另外一个，然后接收另一个设备的反馈。</p>
-<p>在网络编程中，发起连接程序，也就是发送第一次请求的程序，被称作客户端(Client)，等待其他程序连接的程序被称作服务器(Server)。客户端程序可以在需要的时候启动，而服务器为了能够时刻相应连接，则需要一直启动。例如以打电话为例，首先拨号的人类似于客户端，接听电话的人必须保持电话畅通类似于服务器。</p>
-<p>连接一旦建立以后，就客户端和服务器端就可以进行数据传递了，而且两者的身份是等价的。</p>
-<p>在一些程序中，程序既有客户端功能也有服务器端功能，最常见的软件就是BT、emule这类软件了。</p>
-<p>下面来谈一下如何建立连接以及如何发送数据。</p>
-<p><strong>IP地址和域名</strong></p>
-<p>在现实生活中，如果要打电话则需要知道对应人的电话号码，如果要寄信则需要知道收信人的地址。在网络中也是这样，需要知道一个设备的位置，则需要使用该设备的IP地址，具体的连接过程由硬件实现，程序员不需要过多的关心。</p>
-<p>IP地址是一个规定，现在使用的是IPv4，既由4个0-255之间的数字组成，在计算机内部存储时只需要4个字节即可。在计算机中，IP地址是分配给网卡的，每个网卡有一个唯一的IP地址，如果一个计算机有多个网卡，则该台计算机则拥有多个不同的IP地址，在同一个网络内部，IP地址不能相同。IP地址的概念类似于电话号码、身份证这样的概念。</p>
-<p>由于IP地址不方便记忆，所以有专门创造了域名(Domain Name)的概念，其实就是给IP取一个字符的名字，例如163.com、sina.com等。IP和域名之间存在一定的对应关系。如果把IP地址类比成身份证号的话，那么域名就是你的姓名。</p>
-<p>其实在网络中只能使用IP地址进行数据传输，所以在传输以前，需要把域名转换为IP，这个由称作DNS的服务器专门来完成。</p>
-<p>所以在网络编程中，可以使用IP或域名来标识网络上的一台设备。</p>
-<p><strong>端口的概念</strong></p>
-<p>为了在一台设备上可以运行多个程序，人为的设计了端口(Port)的概念，类似的例子是公司内部的分机号码。</p>
-<p>规定一个设备有216个，也就是65536个端口，每个端口对应一个唯一的程序。每个网络程序，无论是客户端还是服务器端，都对应一个或多个特定的端口号。由于0-1024之间多被操作系统占用，所以实际编程时一般采用1024以后的端口号。</p>
-<p>使用端口号，可以找到一台设备上唯一的一个程序。</p>
-<p>所以如果需要和某台计算机建立连接的话，只需要知道IP地址或域名即可，但是如果想和该台计算机上的某个程序交换数据的话，还必须知道该程序使用的端口号。</p>
-<p><strong>数据传输方式</strong></p>
-<p>知道了如何建立连接，下面就是如何传输数据了，先来看一下数据传输的方式。</p>
-<p>在网络上，不管是有线传输还是无线传输，数据传输的方式有两种：</p>
-<p>&lt;!–[if !supportLists]–&gt;l　&lt;!–[endif]–&gt;TCP(Transfer Control Protocol)</p>
-<p>传输控制协议方式，该传输方式是一种稳定可靠的传送方式，类似于显示中的打电话。只需要建立一次连接，就可以多次传输数据。就像电话只需要拨一次号，就可以实现一直通话一样，如果你说的话不清楚，对方会要求你重复，保证传输的数据可靠。</p>
-<p>使用该种方式的优点是稳定可靠，缺点是建立连接和维持连接的代价高，传输速度不快。</p>
-<p>&lt;!–[if !supportLists]–&gt;l　&lt;!–[endif]–&gt;UDP(User Datagram Protocol)</p>
-<p>用户数据报协议方式，该传输方式不建立稳定的连接，类似于发短信息。每次发送数据都直接发送。发送多条短信，就需要多次输入对方的号码。该传输方式不可靠，数据有可能收不到，系统只保证尽力发送。</p>
-<p>使用该种方式的优点是开销小，传输速度快，缺点是数据有可能会丢失。</p>
-<p>在实际的网络编程中，大家可以根据需要选择任何一种传输方式，或组合使用这两种方式实现数据的传递。</p>
-<p><strong>协议的概念</strong></p>
-<p>协议(Protocol)是网络编程中一个非常重要的概念，指的是传输数据的格式。因为大家在网络中需要传输各种各样的信息，在程序中获得到的都是一组数值，如何阅读这些数值呢，就需要提前规定好这组数据的格式，在客户端按照该格式生成发送数据，服务器端按照该格式阅读该数据，然后在按照一定的格式生成数据反馈给客户端，客户端再按照该格式阅读数据。现实中类似的例子就是电报编码，每个数字都是用特定的数据表达。</p>
-<p>一般程序的协议都分成客户端发送的数据格式，以及服务器端反馈的数据格式，客户端和服务器端都遵循该格式生成或处理数据，实现两者之间的复杂数据交换。</p>
-<p><strong>小结</strong></p>
-<p>网络编程就是使用IP地址，或域名，和端口连接到另一台计算机上对应的程序，按照规定的协议(数据格式)来交换数据，实际编程中建立连接和发送、接收数据在语言级已经实现，做的更多的工作是设计协议，以及编写生成和解析数据的代码罢了，然后把数据转换成逻辑的结构显示或控制逻辑即可。</p>
-<p>对于初学者，或者没有接触过网络编程的程序员，会觉得网络编程涉及的知识很高深，很难，其实这是一种误解，当你的语法熟悉以后，其实基本的网络编程现在已经被实现的异常简单了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络协议</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/日常随笔//" class="article-tag-list-link color5">日常随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/29/e7-bd-91-e7-bb-9c-e7-bc-96-e7-a8-8b-e4-bb-8b-e7-bb-8d/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-php-e5-9b-be-e5-83-8f-e6-93-8d-e4-bd-9c-e5-87-bd-e6-95-b0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/28/php-e5-9b-be-e5-83-8f-e6-93-8d-e4-bd-9c-e5-87-bd-e6-95-b0/">php图像操作函数</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/28/php-e5-9b-be-e5-83-8f-e6-93-8d-e4-bd-9c-e5-87-bd-e6-95-b0/" class="archive-article-date">
-  	<time datetime="2017-08-28T02:54:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>php的GD库提供了丰富的图像处理函数，要想使用这些函数就必须开启GD扩展库，在php.ini里开启。</p>
-<h3 id="获取图像信息"><a href="#获取图像信息" class="headerlink" title="获取图像信息"></a>获取图像信息</h3><ul>
-<li>getimagesize()：获取图像尺寸，类型等信息。</li>
-<li>imagesx()：获取图像宽度。</li>
-<li>imagesy()：获取图像高度。</li>
-</ul>
-<h3 id="创建图像"><a href="#创建图像" class="headerlink" title="创建图像"></a>创建图像</h3><ul>
-<li>imagecreate()：创建一幅空白图像。</li>
-<li>imagecreatetruecolor()：创建一幅真彩色空白图像。</li>
-</ul>
-<h3 id="销毁图像资源"><a href="#销毁图像资源" class="headerlink" title="销毁图像资源"></a>销毁图像资源</h3><p>&nbsp;</p>
-<ul>
-<li>imagedestroy()：销毁图像资源。<br>&nbsp;</li>
-</ul>
-<h3 id="载入图像"><a href="#载入图像" class="headerlink" title="载入图像"></a>载入图像</h3><ul>
-<li>imagecreatefromgif()：创建一块画布，并从 GIF 文件或 URL 地址载入一副图像</li>
-<li>imagecreatefromjpeg()：创建一块画布，并从 JPEG 文件或 URL 地址载入一副图像</li>
-<li>imagecreatefrompng()：创建一块画布，并从 PNG 文件或 URL 地址载入一副图像</li>
-<li>imagecreatefromwbmp()：创建一块画布，并从 WBMP 文件或 URL 地址载入一副图像</li>
-<li>imagecreatefromstring()：创建一块画布，并从字符串中的图像流新建一副图像</li>
-</ul>
-<h3 id="输出图像"><a href="#输出图像" class="headerlink" title="输出图像"></a>输出图像</h3><ul>
-<li>imagegif()：以 GIF 格式将图像输出到浏览器或文件</li>
-<li>imagejpeg()：以 JPEG 格式将图像输出到浏览器或文件</li>
-<li>imagepng()：以 PNG 格式将图像输出到浏览器或文件</li>
-<li>imagewbmp()：以 WBMP 格式将图像输出到浏览器或文件</li>
-</ul>
-<h3 id="分配-取消图像颜色"><a href="#分配-取消图像颜色" class="headerlink" title="分配/取消图像颜色"></a>分配/取消图像颜色</h3><ul>
-<li>imagecolorallocate()：为图像分配颜色。</li>
-<li>imagecolordeallocate()：取消先前由 imagecolorallocate() 等函数为图像分配的颜色。</li>
-</ul>
-<h3 id="拷贝图像"><a href="#拷贝图像" class="headerlink" title="拷贝图像"></a>拷贝图像</h3><ul>
-<li>imagecopy()：拷贝图像。</li>
-<li>imagecopyresized()：拷贝图像并调整大小。</li>
-</ul>
-<h3 id="合并图像（水印制作实例）"><a href="#合并图像（水印制作实例）" class="headerlink" title="合并图像（水印制作实例）"></a>合并图像（水印制作实例）</h3><ul>
-<li>imagecopymerge()：拷贝并合并图像的一部分。</li>
-</ul>
-<h3 id="绘制线段与圆弧"><a href="#绘制线段与圆弧" class="headerlink" title="绘制线段与圆弧"></a>绘制线段与圆弧</h3><ul>
-<li>imageline()：绘制一条线段。</li>
-<li>imagesetstyle()：设定画线风格。</li>
-<li>imagearc()：绘制椭圆弧（包括圆弧）。</li>
-</ul>
-<h3 id="图像填充"><a href="#图像填充" class="headerlink" title="图像填充"></a>图像填充</h3><ul>
-<li>imagefill()：填充图像区域。</li>
-<li>imagefilledarc()：画一椭圆弧并填充。</li>
-<li>imagefilledrectangle()：画一矩形并填充。</li>
-<li>imagefilledpolygon()：画一多边形并填充。<br>转载自：<a href="http://www.5idev.com/p-php_gd.shtml" target="_blank" rel="noopener">http://www.5idev.com/p-php_gd.shtml</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/28/php-e5-9b-be-e5-83-8f-e6-93-8d-e4-bd-9c-e5-87-bd-e6-95-b0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-php-e6-b7-bb-e5-8a-a0-e6-b0-b4-e5-8d-b0-e5-92-8c-e7-bc-a9-e7-95-a5-e5-9b-be" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/28/php-e6-b7-bb-e5-8a-a0-e6-b0-b4-e5-8d-b0-e5-92-8c-e7-bc-a9-e7-95-a5-e5-9b-be/">php添加水印和缩略图</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/28/php-e6-b7-bb-e5-8a-a0-e6-b0-b4-e5-8d-b0-e5-92-8c-e7-bc-a9-e7-95-a5-e5-9b-be/" class="archive-article-date">
-  	<time datetime="2017-08-28T02:41:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>图片压缩和添加水印的工具类</p>
-<p><pre>&lt;?php<br>/**</pre></p>
-<ul>
-<li>Created by PhpStorm.</li>
-<li>User: ShanyuLiang</li>
-<li>Date: 2017/8/24</li>
-<li><p>Time: 9:47<br>*/<br>class ImageTool<br>{<br> private $imagePath;//图片路径<br> private $outputDir;//输出文件夹<br> private $memoryImg;//内存图像</p>
-<p> public function __construct($imagePath, $outputDir = null)<br> {</p>
-<pre><code>$this-&amp;gt;imagePath = $imagePath;
-$this-&amp;gt;outputDir = $outputDir;
-$this-&amp;gt;memoryImg = null;
-</code></pre><p> }</p>
-<p> /**</p>
-<ul>
-<li>显示内存中的图片</li>
-<li><p>@param $image<br>*/<br>public function showImage()<br>{<br> if ($this-&gt;memoryImg != null) {</p>
-<pre><code>$info = getimagesize($this-&amp;gt;imagePath);
-$type = image_type_to_extension($info[2], false);
-header(&apos;Content-type:&apos; . $info[&apos;mime&apos;]);
-$funs = &quot;image{$type}&quot;;
-$funs($this-&amp;gt;memoryImg);
-imagedestroy($this-&amp;gt;memoryImg);
-$this-&amp;gt;memoryImg = null;
-</code></pre><p> }<br>}</p>
-<p>/**将图片以文件形式保存</p>
-</li>
-<li><p>@param $image<br>*/<br>private function saveImage($image)<br>{<br> $info = getimagesize($this-&gt;imagePath);<br> $type = image_type_to_extension($info[2], false);<br> $funs = “image{$type}”;<br> if (empty($this-&gt;outputDir)) {</p>
-<pre><code>$funs($image, md5($this-&amp;gt;imagePath) . &apos;.&apos; . $type);
-</code></pre><p> } else {</p>
-<pre><code>$funs($image, PATH_IMG.$this-&amp;gt;outputDir . md5($this-&amp;gt;imagePath) . &apos;.&apos; . $type);
-return R_PATH_IMG.$this-&amp;gt;outputDir. md5($this-&amp;gt;imagePath) . &apos;.&apos; . $type;
-</code></pre><p> }<br> return false;<br>}</p>
-<p>/**</p>
-</li>
-<li>压缩图片</li>
-<li>@param $width 压缩后宽度</li>
-<li>@param $height 压缩后高度</li>
-<li>@param bool $output 是否输出文件</li>
-<li><p>@return resource<br>*/<br>public function compressImage($width, $height, $output = false)<br>{<br> $image = null;<br> $path =’’;<br> $info = getimagesize($this-&gt;imagePath);<br> $type = image_type_to_extension($info[2], false);<br> $fun = “imagecreatefrom{$type}”;<br> $image = $fun($this-&gt;imagePath);<br> $thumbnail = imagecreatetruecolor($width, $height);<br> imagecopyresampled($thumbnail, $image, 0, 0, 0, 0, $width, $height, $info[0], $info[1]);<br> imagedestroy($image);<br> if($output){</p>
-<pre><code>if(!is_dir(PATH_IMG.$this-&amp;gt;outputDir)){
-    mkdir(PATH_IMG.$this-&amp;gt;outputDir, 0777, true);
+        <h2 id="隐藏nginx版本号"><a href="#隐藏nginx版本号" class="headerlink" title="隐藏nginx版本号"></a>隐藏nginx版本号</h2><p>nginx版本号一般显示在两个地方，①第一个是HTTP header，有个Server:nginx/1.x.x类似会暴露Web服务器所用软件名称以及版本号，这个也是大多数Web服务器最容易暴露版本号的地方；②第二个是Nginx出错页面，比如404页面没有找到等，这是如果用户没有指定页面的话，那么Nginx自己的页面会有版本戳记。接下来我们就做隐藏操作：</p>
+<p>1.打开Nginx主配置文件：nginx.conf（我的文件位置 /etc/nginx/nginx.conf），找到server_tokens ，将off改为on即可</p>
+<pre>http {
+    # ...省略一些配置
+　　sendfile on;
+　　tcp_nopush on;
+　　keepalive_timeout 60;
+　　tcp_nodelay on;
+    server_tokens off; 　　#默认是注释掉的
+
+　　# ...省略一些配置
 }
-$path = $this-&amp;gt;saveImage($thumbnail);
-</code></pre><p> }<br> $this-&gt;memoryImg = $thumbnail;<br> return $path;<br>}</p>
-<p>/**</p>
-</li>
-<li>为图像添加文字标记<br>*</li>
-<li>@param $content 文本内容</li>
-<li>@param $size 字体大小</li>
-<li>@param $font 字体样式</li>
-<li>@param bool $output 是否输出文件</li>
-<li><p>@return $this<br><em>/<br>public function addTextmark($content, $size, $font, $output = false)<br>{<br> $info = getimagesize($this-&gt;imagePath);<br> $type = image_type_to_extension($info[2], false);<br> $fun = “imagecreatefrom{$type}”;<br> $image = $fun($this-&gt;imagePath);<br> $color = imagecolorallocatealpha($image, 0, 0, 0, 80);<br> $posX = imagesx($image) - strlen($content) </em> $size / 2;<br> $posY = imagesy($image) - $size / 1.5;<br> imagettftext($image, $size, 0, $posX, $posY, $color, $font, $content);<br> if ($output) {</p>
-<pre><code>$this-&amp;gt;saveImage($image);
-</code></pre><p> }<br> $this-&gt;memoryImg = $image;<br> return $this;<br>}</p>
-<p>/**</p>
-</li>
-<li>为图片添加水印<br>*</li>
-<li>@param $watermark 水印图片路径</li>
-<li>@param $alpha 水印透明度(0-100)</li>
-<li>@param bool $output 是否输出文件</li>
-<li>@return $this<br>*/<br>public function addWatermark($watermark, $alpha, $output = false)<br>{<br> $image_info = getimagesize($this-&gt;imagePath);<br> $image_type = image_type_to_extension($image_info[2], false);<br> $image_fun = “imagecreatefrom{$image_type}”;<br> $image = $image_fun($this-&gt;imagePath);<br> $mark_info = getimagesize($watermark);<br> $mark_type = image_type_to_extension($mark_info[2], false);<br> $mark_fun = “imagecreatefrom{$mark_type}”;<br> $mark = $mark_fun($watermark);<br> $posX = imagesx($image) - imagesx($mark);<br> $posY = imagesy($image) - imagesy($mark);<br> imagecopymerge($image, $mark, $posX, $posY, 0, 0, $mark_info[0], $mark_info[1], $alpha);<br> if ($output) {<pre><code>$this-&amp;gt;saveImage($image);
-</code></pre> }<br> $this-&gt;memoryImg = $image;<br> return $this;<br>}<br>}</li>
-</ul>
-</li>
-</ul>
-<p>导入并使用工具类<br>include_once ‘ImageTool.php’;</p>
-<p>然后实例化ImageTool对象：<br>$imageTool = new ImageTool(‘img/oppman.jpeg’, ‘out/‘);//图片路径、输出文件夹</p>
-<p><br>一、生成压缩图片</p>
-<div class="cnblogs_code"><br><pre>$imageTool-&gt;compressImage(350, 250, true);//压缩宽度、压缩高度、是否保存<br>$imageTool-&gt;showImage();<br><br></pre><br>二、添加文字水印<br><div class="cnblogs_code"><br><pre>$imageTool-&gt;addTextmark(‘一拳超人’, 50, ‘res/micro.ttf’, true);//内容、尺寸、字体、是否保存<br>$imageTool-&gt;showImage();<br><br></pre><br>三、添加图片水印<br><div class="cnblogs_code"><br><pre>$imageTool-&gt;addWatermark(‘res/logo.jpeg’, 100, true);//水印路径、透明度、是否保存<br>$imageTool-&gt;showImage();<br><br></pre><br>仅当做临时图像输出：<br><div class="cnblogs_code"><br><pre>$imageTool-&gt;addTextmark(‘快捷输出’, 50, ‘res/micro.ttf’)-&gt;showImage();</pre><br></div><br></div><br></div><br></div>
+2.编辑php-fpm配置文件，如fastcgi.conf（我的跟nginx.conf同目录），打开文件：
+找到：
+    fastcgi_param SERVER_SOFTWARE nginx/$nginx_version;
+改为：
+    fastcgi_param SERVER_SOFTWARE nginx;
+3.重启nginx服务：
+# /etc/init.d/nginx reload 或 
+# servic nginx reload</pre>
+
+<h2 id="隐藏php版本号"><a href="#隐藏php版本号" class="headerlink" title="隐藏php版本号"></a>隐藏php版本号</h2><p>php版本号也是显示在HTTP header中，但配置并不是nginx控制，而是php配置文件即php.ini文件</p>
+<p>1.打开php.ini文件</p>
+<p>找到：</p>
+<p><strong>        expose_php = On</strong></p>
+<p>改为：</p>
+<p><strong>       expose_php = Off</strong></p>
+<p>2.重启php-fpm</p>
+<p>关闭PHP</p>
+<h1 id="killall-php-fpm"><a href="#killall-php-fpm" class="headerlink" title="killall php-fpm"></a>killall php-fpm</h1><p>php重启</p>
+<h1 id="usr-local-php-sbin-php-fpm-amp"><a href="#usr-local-php-sbin-php-fpm-amp" class="headerlink" title="/usr/local/php/sbin/php-fpm &amp;"></a>/usr/local/php/sbin/php-fpm &amp;</h1><p>最后打开浏览器，测试一下吧！</p>
+
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/28/php-e6-b7-bb-e5-8a-a0-e6-b0-b4-e5-8d-b0-e5-92-8c-e7-bc-a9-e7-95-a5-e5-9b-be/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-e6-9c-80-e6-96-b0-e6-9c-80-e8-af-a6-e7-bb-86-e7-9a-84centos-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85git-e6-9c-8d-e5-8a-a1-e5-99-a8-e5-92-8c-e4-bd-bf-e7-94-a8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/23/e6-9c-80-e6-96-b0-e6-9c-80-e8-af-a6-e7-bb-86-e7-9a-84centos-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85git-e6-9c-8d-e5-8a-a1-e5-99-a8-e5-92-8c-e4-bd-bf-e7-94-a8/">最新最详细的CentOS编译安装git服务器和使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/23/e6-9c-80-e6-96-b0-e6-9c-80-e8-af-a6-e7-bb-86-e7-9a-84centos-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85git-e6-9c-8d-e5-8a-a1-e5-99-a8-e5-92-8c-e4-bd-bf-e7-94-a8/" class="archive-article-date">
-  	<time datetime="2017-08-23T11:15:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h4><p>之前一直用svn来管理代码，用了一年多，感觉还挺好用，能满足日常的代码管理，操作也简单方便，直到有一天在逛论坛的时候，说用git的鄙视用svn的，当时我就来气了，我用svn怎么了，就这么不受待见，很早就听过git这款工具，但一直没去详细了解，所以为了知彼知己方能百战不殆，于是我就去研究一番git。</p>
-<p>git和svn，cvs最大的区别就是前者是分布式版本控制系统而后两者是集中式版本控制系统，有什么区别呢？</p>
-<p>先说集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p>
-<p>集中式版本控制系统最大的毛病就是必须联网才能工作，如果在局域网内还好，带宽够大，速度够快，可如果在互联网上，遇到网速慢的话，可能提交一个10M的文件就需要5分钟，这还不得把人给憋死啊。</p>
-<p>那分布式版本控制系统与集中式版本控制系统有何不同呢？首先，分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。既然每个人电脑上都有一个完整的版本库，那多个人如何协作呢？比方说你在自己电脑上改了文件A，你的同事也在他的电脑上改了文件A，这时，你们俩之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
-<p>和集中式版本控制系统相比，分布式版本控制系统的安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。而集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。</p>
-<p>在实际使用分布式版本控制系统的时候，其实很少在两人之间的电脑上推送版本库的修改，因为可能你们俩不在一个局域网内，两台电脑互相访问不了，也可能今天你的同事病了，他的电脑压根没有开机。因此，分布式版本控制系统通常也有一台充当“中央服务器”的电脑，但这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。</p>
-<p>有点扯远了，我们还是进入正题来安装一下git吧。</p>
-<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a><strong>准备</strong></h4><p>一、安装依赖库</p>
-<blockquote>
-<p><pre># yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</pre></p>
-<h1 id="yum-install-gcc-perl-ExtUtils-MakeMaker"><a href="#yum-install-gcc-perl-ExtUtils-MakeMaker" class="headerlink" title="yum install  gcc perl-ExtUtils-MakeMaker"></a>yum install  gcc perl-ExtUtils-MakeMaker</h1><p>二、卸载旧版git（原先yum安装过git）</p>
-<h1 id="yum-remove-git"><a href="#yum-remove-git" class="headerlink" title="yum remove git"></a>yum remove git</h1><p>下载最新源码包<a href="https://github.com/git/git/releases" target="_blank" rel="noopener">Git下载地址</a>，然后ftp上传到服务器，也可以用下面的方法获取：<br>wget <a href="https://github.com/git/git/archive/v2.1.2.tar.gz" target="_blank" rel="noopener">https://github.com/git/git/archive/v2.1.2.tar.gz</a> -O git.tar.gz<br>三、开始安装</p>
-</blockquote>
-<p>解压</p>
-<blockquote>
-<h1 id="tar-zxf-git-tar-gz"><a href="#tar-zxf-git-tar-gz" class="headerlink" title="tar -zxf git.tar.gz"></a>tar -zxf git.tar.gz</h1><p>进入源码</p>
-<h1 id="cd-git"><a href="#cd-git" class="headerlink" title="cd git-*"></a>cd git-*</h1><p>编译安装</p>
-<pre># make prefix=/usr/local/git all
-
-# make prefix=/usr/local/git install</pre>
-将git加入PATH
-# echo 'export PATH=$PATH:/usr/local/git/bin' &gt;&gt; /etc/bashrc
-
-
-# source /etc/bashrc
-安装成功后查看版本
-# git --version
-创建git账号并设置密码
-<pre># useradd -m git
-
-# passwd git</pre>
-
-<p>New password:</p>
-<p>Retype new password:</p>
-<p>passwd: all authentication tokens updated successfully.<br>创建git仓库并设置并初始化</p>
-<p><pre># mkdir -p /home/git/repositories/test.git</pre></p>
-<h1 id="cd-home-git-repositories-test-git"><a href="#cd-home-git-repositories-test-git" class="headerlink" title="cd /home/git/repositories/test.git"></a>cd /home/git/repositories/test.git</h1><h1 id="git-–bare-init"><a href="#git-–bare-init" class="headerlink" title="git –bare init"></a>git –bare init</h1><p>Initialized empty Git repository in /home/git/repositories/test.git/<br>给git仓库目录设置用户和用户组并设置权限</p>
-<p><pre># chown -R git:git /home/git/repositories</pre></p>
-<h1 id="chmod-755-home-git-repositories"><a href="#chmod-755-home-git-repositories" class="headerlink" title="chmod 755 /home/git/repositories"></a>chmod 755 /home/git/repositories</h1><p><br>限制git账号的ssh连接</p>
-<h1 id="whereis-git-shell"><a href="#whereis-git-shell" class="headerlink" title="whereis git-shell"></a>whereis git-shell</h1><p>git-shell: /usr/src/git-2.10.0/git-shell<br>编辑passwd文件</p>
-<h1 id="vi-etc-passwd"><a href="#vi-etc-passwd" class="headerlink" title="vi /etc/passwd"></a>vi /etc/passwd</h1><p>git:x:500:500::/home/git:/bin/bash</p>
-<p>将最后的/bin/bash改为：git-shell的目录 /usr/src/git-2.10.0/git-shell  如下：</p>
-<p>git:x:500:500::/home/git:/usr/src/git-2.10.0/git-shell<br>然后保存退出，这里一定要注意修改的目录，因为我在这里踩过坑，就是/usr/src/git-2.10.0/git-shell是你的安装目录，要后续拉取验证会一直失败。</p>
-</blockquote>
-<p>clone地址：</p>
-<p>ssh://git@服务器ip地址:端口/home/git/repositories/test.git</p>
-<h4 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a><strong>本地使用</strong></h4><p>本地安装git服务器和tortoiseGit，这个步骤就不多说了，安装还是很简单的，基本默认就行了。</p>
-<p>拉取服务器代码</p>
-<p>要想拉取到服务代码，就必须通过服务器的验证，git不像svn输入远程链接然后输入账号密码就可以checkout，git需要密匙验证。</p>
-<p>在本地的git服务器，Git Bash中，生成密匙：</p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “xxxxxxx@xx.com”<br>然后回车，会在.ssh文件下生成id_rsa和id_rsa.pub两个文件（生成过程中会有目录提示），最后复制id_rsa.pub里的内容到服务器下.ssh文件下的authorized_keys文件里，</p>
-</blockquote>
-<p>.ssh文件默认在root文件下，如果没有authorized_keys文件可以自己创建，保存后本地就可以通过ssh://git@服务器ip地址:端口/home/git/repositories/test.git连接拉取服务器</p>
-<p>代码，拉取过程中会要求输入密码，即在服务器安装git时设置的密码，通过验证拉取成功。</p>
-<p>补充：（如遇到验证问题）</p>
-<p>1.git上的仓库对git用户要有写权限，同时需要将/etc/ssh/sshd_config中将RSA认证打开,即</p>
-<blockquote>
-<p>RSAAuthentication yes</p>
-<p>PubkeyAuthentication yes</p>
-<p>AuthorizedKeysFile .ssh/authorized_keys<br>2./home/git属于git用户所有，且权限为755即drwxr-xr-x。<br>3.确保.ssh/authorized_keys中每个用户的id_rsa.pub(公钥)为ssh-rsa开头</p>
-</blockquote>
-
-      
-
       
     </div>
     <div class="article-info article-info-index">
@@ -1277,7 +235,7 @@ $path = $this-&amp;gt;saveImage($thumbnail);
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
         		</li>
       		
 		</ul>
@@ -1289,259 +247,11 @@ $path = $this-&amp;gt;saveImage($thumbnail);
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/git//" class="article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/23/e6-9c-80-e6-96-b0-e6-9c-80-e8-af-a6-e7-bb-86-e7-9a-84centos-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85git-e6-9c-8d-e5-8a-a1-e5-99-a8-e5-92-8c-e4-bd-bf-e7-94-a8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85php7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85php7/">CentOS6.8编译安装php7</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/22/centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85php7/" class="archive-article-date">
-  	<time datetime="2017-08-22T12:03:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h4><p>之前装了好几个版本的php，但是过了一段时间又有点忘记整个安装过程了，所以今天拿阿里云来装php最新稳定版即php7.1.8来加强一下记忆。php的安装还是挺简单，不像mysql那么麻烦，主要是扩展库的依赖，扩展库没问题基本上安装不会出现什么错误，接下来就看看整个安装过程吧。</p>
-<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a><strong>准备</strong></h4><p>1.安装依赖包</p>
-<blockquote>
-<p>yum install libmcrypt libmcrypt-devel mhash mhash-devel libxml2 libxml2-devel bzip2 bzip2-devel<br>编译时可能会报错，都是依赖包未安装的原因，在本文后面会有一些缺失的依赖包安装方法，找到相应的安装即可。</p>
-</blockquote>
-<p>2.开始安装</p>
-<p>① 到官网下载源码包，版本可以自己选择，下载后用ftp工具上传到服务器，也可以用rz命令发送到服务器</p>
-<blockquote>
-<div class="line number1 index0 alt2"><code># tar xvf php-7.1.8.tar.bz -C /usr/local/src</code></div>
-
-<div class="line number2 index1 alt1"><code># cd /usr/local/src/php-7.1.8</code></div>
-
-<div class="line number3 index2 alt2"><code>执行下面的配置文件：</code></div>
-
-<div class="line number4 index3 alt1"><code># ./configure --prefix=/usr/local/php \</code></div>
-
-<div class="line number5 index4 alt2"><code>--with-config-file-scan-dir=/etc/php.d \</code></div>
-
-<div class="line number6 index5 alt1"><code>--with-config-file-path=/etc \</code></div>
-
-<div class="line number7 index6 alt2"><code>--with-mysql=/usr/local/mysql \</code></div>
-
-<div class="line number8 index7 alt1"><code>--with-mysqli=/usr/local/mysql/bin/mysql_config \</code></div>
-
-<div class="line number9 index8 alt2"><code>--enable-fpm \</code></div>
-
-<div class="line number10 index9 alt1"><code>--enable-opcache \</code></div>
-
-<div class="line number11 index10 alt2"><code>--disable-fileinfo \</code></div>
-
-<div class="line number12 index11 alt1"><code>--with-jpeg-dir \</code></div>
-
-<div class="line number13 index12 alt2"><code>--with-iconv-dir=/usr/local \</code></div>
-
-<div class="line number14 index13 alt1"><code>--with-freetype-dir \</code></div>
-
-<div class="line number15 index14 alt2"><code>--with-png-dir \</code></div>
-
-<div class="line number16 index15 alt1"><code>--with-zlib \</code></div>
-
-<div class="line number17 index16 alt2"><code>--with-libxml-dir=/usr \</code></div>
-
-<div class="line number18 index17 alt1"><code>--enable-xml \</code></div>
-
-<div class="line number19 index18 alt2"><code>--enable-bcmath \</code></div>
-
-<div class="line number20 index19 alt1"><code>--enable-shmop \</code></div>
-
-<div class="line number21 index20 alt2"><code>--enable-exif \</code></div>
-
-<div class="line number22 index21 alt1"><code>--with-curl \</code></div>
-
-<div class="line number23 index22 alt2"><code>--enable-sysvsem \</code></div>
-
-<div class="line number24 index23 alt1"><code>--enable-inline-optimization \</code></div>
-
-<div class="line number25 index24 alt2"><code>--enable-mbregex \</code></div>
-
-<div class="line number26 index25 alt1"><code>--enable-inline-optimization \</code></div>
-
-<div class="line number27 index26 alt2"><code>--enable-mbstring \</code></div>
-
-<div class="line number28 index27 alt1"><code>--with-mcrypt \</code></div>
-
-<div class="line number29 index28 alt2"><code>--with-gd \</code></div>
-
-<div class="line number30 index29 alt1"><code>--enable-gd-native-ttf \</code></div>
-
-<div class="line number31 index30 alt2"><code>--with-openssl \</code></div>
-
-<div class="line number32 index31 alt1"><code>--with-mhash \</code></div>
-
-<div class="line number33 index32 alt2"><code>--enable-pcntl \</code></div>
-
-<div class="line number34 index33 alt1"><code>--enable-sockets \</code></div>
-
-<div class="line number35 index34 alt2"><code>--with-xmlrpc \</code></div>
-
-<div class="line number36 index35 alt1"><code>--enable-ftp \</code></div>
-
-<div class="line number37 index36 alt2"><code>--with-gettext \</code></div>
-
-<div class="line number38 index37 alt1"><code>--enable-zip \</code></div>
-
-<div class="line number39 index38 alt2"><code>--enable-soap \</code></div>
-
-<div class="line number40 index39 alt1"><code>--with-bz2</code></div><br><div>  执行以上的配置，如果出现License，才是正确的，才可以开始编译，如果出问题，就解决，一般是少了什么库。</div><br><div></div><br><div><br><div>②执行编译：</div><br><div># make &amp;&amp; make install</div><br></div><br>③添加php和php-fpm配置文件<br><div># cp /usr/local/src/php-7.1.8/php.ini-production /etc/php.ini</div>
-
-<div># cd /usr/local/php/etc/</div>
-
-<div># cp php-fpm.conf.default php-fpm.conf</div>
-
-<div># sed -i ‘s@;pid = run/php-fpm.pid@pid = /usr/local/php/var/run/php-fpm.pid@’ php-fpm.conf</div><br><div></div><br><div>⑤添加php-fpm启动脚本</div><br><div><br><div># cp /usr/local/src/php-7.1.8/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</div>
-
-<div># chmod +x /etc/init.d/php-fpm</div><br></div><br><div></div><br><div>⑥添加php-fpm至服务列表并设置开机自启</div><br><div><br><div># chkconfig –add php-fpm</div>
-
-<div># chkconfig –list php-fpm</div>
-
-<p><div># chkconfig php-fpm on</div></p>
-<p><div></div><br></p></div><p></p>
-<p><div>⑦启动服务</div></p>
-<p><div># service php-fpm start</div></p>
-<p><div></div></p>
-<p><div></div></p>
-<p><div><strong>注：</strong></div></p>
-<p><div>启动时如出现错误：WARNING: Nothing matches the include pattern ‘/usr/local/etc/php-fpm.d/*.conf’ from /usr/local/etc/php-fpm.conf at line 125.</div></p>
-<p><div>ERROR:. No pool defined at least one pool section must be specified in config file</div></p>
-<p><div>ERROR: failed to post process the configuration</div></p>
-<p><div>ERROR: FPM initialization failed</div></p>
-<p><div>解决：到指定目录执行cp www.conf.default www.conf</div><br></p>
-<p><div></div></p>
-<p><div>⑧添加nginx对fastcgi的支持</div></p>
-<div>
-
-</div></blockquote>
-<p>首先备份默认的配置文件。</p>
-<blockquote>
-<h1 id="cp-etc-nginx-nginx-conf-etc-nginx-nginx-confbak"><a href="#cp-etc-nginx-nginx-conf-etc-nginx-nginx-confbak" class="headerlink" title="cp /etc/nginx/nginx.conf /etc/nginx/nginx.confbak"></a>cp /etc/nginx/nginx.conf /etc/nginx/nginx.confbak</h1><h1 id="cp-etc-nginx-nginx-conf-default-etc-nginx-nginx-conf"><a href="#cp-etc-nginx-nginx-conf-default-etc-nginx-nginx-conf" class="headerlink" title="cp /etc/nginx/nginx.conf.default /etc/nginx/nginx.conf"></a>cp /etc/nginx/nginx.conf.default /etc/nginx/nginx.conf</h1><div>编辑/etc/nginx/nginx.conf，在所支持的主页面格式中添加php格式的主页，类似如下：</div><br><div><br><div class="line number1 index0 alt2"><code>location / {</code></div>
-
-<div class="line number2 index1 alt1"><code>``root /usr/local/nginx/html;</code></div>
-
-<div class="line number3 index2 alt2"><code>``index index.php index.html index.htm;</code></div>
-
-<div class="line number4 index3 alt1"><code>}</code></div><br><div>取消以下内容前面的注释：</div><br><div><br><div class="line number1 index0 alt2"><code>location ~ \.php$ {</code></div>
-
-<div class="line number2 index1 alt1"><code>``root /usr/local/nginx/html;</code></div>
-
-<div class="line number3 index2 alt2"><code>``fastcgi_pass 127.0.0.1:9000;</code></div>
-
-<div class="line number4 index3 alt1"><code>``fastcgi_index index.php;</code></div>
-
-<div class="line number5 index4 alt2"><code>``fastcgi_param SCRIPT_FILENAME /usr/local/nginx/html/$fastcgi_script_name;</code></div>
-
-<div class="line number6 index5 alt1"><code>``include fastcgi_params;</code></div>
-
-<div class="line number7 index6 alt2"><code>}</code></div><br><div>⑨重启nginx</div><br><div># service nginx reload</div><br></div><br></div><br><br><div></div><br><div>最后测试看是否成功</div><br><div></div><br><div><br><div>在/usr/local/nginx/html/新建index.php的测试页面，内容如下：</div><br><div>&lt;?php</div>
-
-<div>phpinfo();</div>
-
-<div>?&gt;</div><br><div>如果浏览器出现php配置页面则证明安装成功。</div><br></div><br><div></div>
-
-</blockquote>
-<h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a><strong>补充：</strong></h4><div><br><br>在Linux下安装PHP过程中，可能会出现的编译问题：<br><br>第一个问题：<strong><span style="color: #ff0000;">configure: error: libjpeg.(a|so) not found</span></strong><br><div><br><br>很多人都纳闷儿了,我都安装了的,为什么就找不到呢?找不到其实就应试想到它的搜索位置里面是没有的,要不然才不会说not found<br><br>原因是我们大部分一些软件只要rpm -qa | grep <strong><em><br><br>这时下面就有两个重复的的软件<br><br>[root@test php-5.2.13]# rpm -qa | grep jpeg<br>libjpeg-6b-33<br>libjpeg-6b-33<br>libjpeg-devel-6b-33<br><br>32位和64位的都装了。你可以强制删除两个包，再重装64位的包。<br><br>rpm –allmatches –nodeps<br><br>这种方法真是损系统又损你.有时候强制执行的东西也会随便把lib中的一些包给强制删了.所以我不建议这么做,重复就让它重复吧,没关系的!<br><br>要解决问题就是它没找到,我安装了的,那我得去找找看它到底是放那里去了.<br><br>[root@test php-5.2.13]# updatedb<br>[root@test php-5.2.13]# locate libjpeg.so<br>/usr/lib64/libjpeg.so.62<br>/usr/lib64/libjpeg.so.62.0.0<br>/usr/lib64/libjpeg.so<br>/usr/lib/libjpeg.so<br>[root@test php-5.2.13]# locate libjpeg.a<br>/usr/lib64/libjpeg.a<br>/data0/software/jpeg-6b/libjpeg.a<br>[root@test php-5.2.13]#<br><br>我们在编译的时候经常看到一个库的文件,一般就是以</em>.a,<em>.so等名字的,尝试的搜索搜索,不行就模糊搜索!<br><br>通过上面的搜索其实就知道一些原因了,configure一般的搜索编译路径为/usr/lib/下,因为php默认就在/usr/lib/下找相关库文件,而x64机器上是在:/usr/lib64.这时你就可以直接把需要的库文件从/usr/lib64中拷贝到/usr/lib/中去就可以了.<br><br>那么记得要在configure前执行如下的命令:<br><br>cp -frp /usr/lib64/libjpeg.</em> /usr/lib/
-
-</strong><span style="color: #ff0000;">第二个问题：configure: error: libjpng.(a|so) not found</span><strong><br><br>cp -frp /usr/lib64/libpng* /usr/lib/  //和上面方法一样
-
-</strong><span style="color: #ff0000;">第三个问题：configure: error: Cannot find ldap libraries in /usr/lib.</span><strong><br><br><span style="color: #000000;">cp -frp /usr/lib64/libldap* /usr/lib/     </span>//和上面方法一样<br><br><span style="color: #0000ff;"></span></strong>另外附一些常见的configure错误列表供参考:<strong>
-
-</strong><span style="color: #ff0000;">第一个    configure: error: No curses/termcap library found</span><strong><br>解决方法：<br>redhat and centos运行：yum -y install ncurses-devel<br>debian and ubuntu运行: apt-get install libncurses5-dev<br><br><span style="color: #ff0000;"></span></strong>第二个    configure: error: xml2-config not found<strong><br><span style="color: #464646;">yum -y install libxml2-devel</span><br><span style="color: #464646;">debian:apt-get install libxml2-dev</span><br><br><span style="color: #ff0000;"></span></strong>第三个    configure: error: Cannot find OpenSSL’s<strong><br><span style="color: #464646;">yum -y install openssl-devel</span>
-
-</strong><span style="color: #ff0000;">第四个     configure: error: libjpeg.(a|so) not found</span><strong><br><span style="color: #464646;">yum -y install gd</span><br><span style="color: #464646;">yum -y install gd-devel</span><br><span style="color: #464646;">debian:apt-get install libjpeg-dev</span><br><br><span style="color: #ff0000;"></span></strong>第五个     configure: error: libpng.(a|so) not found.<strong><br><span style="color: #464646;">apt-get install libpng12-dev</span>
-
-</strong><span style="color: #ff0000;">第六个     configure: error: cannot find output from lex; giving up</span><strong><br><span style="color: #464646;">yum -y install flex</span><br><br><span style="color: #ff0000;"></span></strong>第七个     configure: error: mod_deflate has been requested but can not be   built due to prerequisite failures<strong><br><span style="color: #464646;">yum -y install zlib-devel openssl-devel</span><br><span style="color: #464646;">debian:apt-get install zlib1g-dev</span><br><br><span style="color: #ff0000;"></span></strong>第八个     configure: error: libXpm.(a|so) not found.<strong><br><span style="color: #464646;">apt-get install libxpm-dev</span>
-
-</strong><span style="color: #ff0000;">第九个     configure: error: freetype.h not found.</span><strong><br><span style="color: #464646;">apt-get install libfreetype6-dev</span>
-
-</strong><span style="color: #ff0000;">第十个     configure: error: No recognized SSL/TLS toolkit detected</span><strong><br><span style="color: #464646;">apt-get install libssl-dev</span><br><br><span style="color: #464646;">yum install libssl-dev</span><br><br><span style="color: #ff0000;"></span></strong>第十一个   Configure: error: xml2-config not found. Please check your libxml2 installation.<strong><br><br><span style="color: #000000;">yum install libxml2 libxml2-devel (For Redhat &amp; Fedora)</span><br><br><span style="color: #000000;">aptitude install libxml2-dev (For ubuntu)</span><br><br><span style="color: #ff0000;"></span></strong>第十二个   configure: error: Cannot find OpenSSL’s<strong><br><br><span style="color: #000000;">yum install openssl openssl-devel</span><br><br><span style="color: #000000;"> </span><br><br><span style="color: #ff0000;"></span></strong>第十三个   Configure: error: Please reinstall the BZip2 distribution<strong><br><br><span style="color: #000000;">yum install bzip2 bzip2-devel</span><br><br><span style="color: #ff0000;"></span></strong>第十四个   Configure: error: Please reinstall the libcurl distribution -easy.h should be in /include/curl/<strong><br><br><span style="color: #000000;">yum install curl curl-devel (For Redhat &amp; Fedora)</span><br><br><span style="color: #000000;">install libcurl4-gnutls-dev (For Ubuntu)</span><br><br><span style="color: #000000;"> </span><br><br><span style="color: #ff0000;"></span></strong>第十五个   Configure: error: libjpeg.(also) not found.<strong><br><br><span style="color: #000000;">yum -y install gd<br>yum -y install gd-devel<br>yum install libjpeg libjpeg-devel</span><br><br><span style="color: #ff0000;"></span></strong>第十六个   Configure: error: libpng.(also) not found.<strong><br><br><span style="color: #000000;">yum install libpng libpng-devel<br>apt-get install libpng12-dev</span>
-
-</strong><span style="color: #ff0000;">第十七个   Configure: error: freetype.h not found.</span><strong><br><span style="color: #464646;">yum install freetype-devel</span><br><br><span style="color: #ff0000;"></span></strong>第十八个   Configure: error: Unable to locate gmp.h<strong><br><br><span style="color: #000000;">yum install gmp-devel</span><br><br><span style="color: #ff0000;"></span></strong>第十九个   Configure: error: Cannot find MySQL header files under /usr.<br>Note that the MySQL client library is not bundled anymore!<strong><br><br><span style="color: #000000;">解决方法:<br>yum install mysql-devel (For Redhat &amp; Fedora)</span><br><br><span style="color: #000000;">apt-get install libmysql++-dev (For Ubuntu)</span><br><br><span style="color: #ff0000;"></span></strong>第二十个   Configure: error: Please reinstall the ncurses distribution<strong><br><br><span style="color: #000000;">yum install ncurses ncurses-devel</span><br><br><span style="color: #ff0000;">第二十一个 Checking for unixODBC support… configure: error: ODBC header file ‘/usr/include/sqlext.h’ not found!</span><br><br><span style="color: #000000;">方法 :<br>yum install unixODBC-devel</span><br><br><span style="color: #ff0000;"></span></strong>第二十二个 Configure: error: Cannot find pspell<strong><br><br><span style="color: #000000;">yum install pspell-devel</span><br><br><span style="color: #ff0000;">第二十三个 configure: error: mcrypt.h not found. Please reinstall libmcrypt.</span><br><br><span style="color: #000000;">yum install libmcrypt libmcrypt-devel (For Redhat &amp; Fedora)</span><br><br><span style="color: #000000;">apt-get install libmcrypt-dev</span><br><br><span style="color: #ff0000;">第二十四个 Configure: error: snmp.h not found. Check your SNMP installation.</span><br><br><span style="color: #000000;">yum install net-snmp net-snmp-devel</span><br><br><span style="color: #ff0000;"></span></strong>第二十五个 开启LDAP服务还需要<strong><br><span style="color: #464646;">yum -y install openldap-devel openldap-servers openldap-clients</span>
-
-</strong><span style="color: #ff0000;">第二十六个 configure: error: No curses/termcap library found</span><strong><br><span style="color: #464646;">yum -y install ncurses-devel (for redhat)</span><br><span style="color: #464646;">apt-get install libncurses5-dev(for debian)</span>
-
-</strong><span style="color: #ff0000;">第二十七个 configure: error: cannot find output from lex; giving up</span><strong><br><span style="color: #464646;">yum -y install flex</span>
-
-</strong><span style="color: #ff0000;">第二十八个 configure: error: mod_deflate has been requested but can not be built due to prerequisite failures</span><strong><br><span style="color: #464646;">yum -y install zlib-devel openssl-devel</span><br><span style="color: #464646;">debian:apt-get install zlib1g-dev</span><br><br><span style="color: #ff0000;"></span></strong>第二十九个 configure: error: libXpm.(a|so) not found.**<br><span style="color: #464646;">apt-get install libxpm-dev</span><br><br><span style="color: #000000;">yum install libXpm</span><br><br>基本都是上面这些问题了。<br><br></div><br></div>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
+        			<a href="/categories/nginx//" class="article-tag-list-link color1">nginx</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Linux/php//" class="article-tag-list-link color4">php</a>
+        			<a href="/categories/nginx/php//" class="article-tag-list-link color4">php</a>
         		</li>
       		
 		</ul>
@@ -1549,16 +259,84 @@ $path = $this-&amp;gt;saveImage($thumbnail);
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/22/centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85php7/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://shanyuliang.com/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          php time()和js date.getTime()的区别
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/02/php-e5-bc-80-e5-90-af-e7-9f-ad-e6-a0-87-e7-ad-be-e6-96-b9-e6-b3-95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php开启短标签方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1578,182 +356,14 @@ $path = $this-&amp;gt;saveImage($thumbnail);
 
 
 
-
-  
-    <article id="post-centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85mysql-5-6-37" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85mysql-5-6-37/">Centos6.8编译安装Mysql-5.6.37</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/22/centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85mysql-5-6-37/" class="archive-article-date">
-  	<time datetime="2017-08-22T09:13:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h4><p>为了更熟悉mysql，今天又重新安装了一遍mysql，本来想选择最新版安装，无奈安装过程中出现太多错误，资料又少，所以最后选择了安装5.6.37版本，安装过程也是极其痛苦，相比nginx和php是最难安装的一个，接下来就介绍一下在安装过程中所遇到的问题。</p>
-<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a><strong>准备</strong></h4><p>1.安装编译源码所需的工具和库</p>
-<blockquote>
-<p>yum -y install gcc gcc-c++ ncurses-devel perl  openssl-devel bison<br>2.安装cmake（记得好像从mysql 5.5开始需要cmake编译安装），可从<a href="https://cmake.org/download/" target="_blank" rel="noopener">https://cmake.org/download/</a> 中下载然后ftp传到服务器<br>tar zxvfcmake-3.9.1.tar.gz</p>
-<p>cd cmake-3.9.1</p>
-<p>./bootstrap</p>
-<p>make &amp;&amp; make install</p>
-</blockquote>
-<h4 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a><strong>开始安装</strong></h4><p>1.创建用户及MySQL所需目录</p>
-<blockquote>
-<p>新增mysql用户</p>
-<p>groupadd -r mysql</p>
-<p>useradd -r -g mysql mysql</p>
-<p>新建MySQL所需目录（可自定义目录）</p>
-<p>mkdir -p /usr/local/mysql   //mysql安装目录</p>
-<p>mkdir -p /data/mysqldb    //数据存放目录<br>2.编译安装MySQL</p>
-</blockquote>
-<p>可从<a href="http://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/mysql/</a> 下载mysql源码，然后通过ftp工具上传服务器</p>
-<blockquote>
-<p>tar zxvf mysql-5.6.37.tar.gz</p>
-<p>cd mysql-5.6.37</p>
-<p>cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql\</p>
-<p>-DDEFAULT_CHARSET=utf8\</p>
-<p>-DDEFAULT_COLLATION=utf8_general_ci\</p>
-<p>-DWITH_INNOBASE_STORAGE_ENGINE=1\</p>
-<p>-DWITH_ARCHIVE_STORAGE_ENGINE=1\</p>
-<p>-DWITH_BLACKHOLE_STORAGE_ENGINE=1\</p>
-<p>-DMYSQL_DATADIR=/data/mysqldb\</p>
-<p>-DMYSQL_TCP_PORT=3306\</p>
-<p>-DENABLE_DOWNLOADS=1\</p>
-<p>-DSYSCONFDIR=/etc\</p>
-<p>-DWITH_SSL=system\</p>
-<p>-DWITH_ZLIB=system\</p>
-<p>-DWITH_LIBWRAP=0</p>
-<p>make&amp;&amp; make install<br>3.修改mysql目录权限<br>cd /usr/local/mysql</p>
-<p>chown -R mysql:mysql .</p>
-<p>cd /data/mysqldb</p>
-<p>chown -R mysql:mysql .<br>4.初始化mysql数据库<br>cd/usr/local/mysql</p>
-<p>./scripts/mysql_install_db –user=mysql –datadir=/data/mysqldb<br>5.编辑MySQL配置文件<br>mv /etc/my.cnf /etc/my.cnf.bak     //如果 /etc 目录下没有my.cnf文件可以自己创建<br>写入内容：<br>[client]</p>
-<p>port = 3306</p>
-<p>socket = /var/lib/mysql/mysql.sock</p>
-<p>[mysqld]</p>
-<p>port = 3306</p>
-<p>socket = /var/lib/mysql/mysql.sock</p>
-<p>datadir =/usr/local/mysql/data<br>也可以参照percona官网中及按照自己的情况生成。网址如下：<a href="https://tools.percona.com/wizard" target="_blank" rel="noopener">https://tools.percona.com/wizard</a></p>
-</blockquote>
-<p>6.配置数据库</p>
-<p>安装完成后默认没有密码，直接输入mysql即可进入mysql控制台</p>
-<blockquote>
-<h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><p>Welcome to the MySQL monitor. Commands end with ; or \g.</p>
-<p>Your MySQL connection id is 1</p>
-<p>Server version: 5.6.37 Source distribution</p>
-<p>Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved.</p>
-<p>Oracle is a registered trademark of Oracle Corporation and/or its</p>
-<p>affiliates. Other names may be trademarks of their respective</p>
-<p>owners.</p>
-<p>Type ‘help;’ or ‘\h’ for help. Type ‘\c’ to clear the current input statement.<br>你也可以查看用户表信息：<br>mysql&gt;select user,password,host from mysql.user;<br>表内的所以用户信息<br>+——+———-+————————-+</p>
-<p>| user | password | host |</p>
-<p>+——+———-+————————-+</p>
-<p>| root |                   | localhost |</p>
-<p>| root |                   | izwz9hx16c6lym981sotzmz |</p>
-<p>| root |                   | 127.0.0.1 |</p>
-<p>| root |                   | ::1 |</p>
-<p>|          |                   | localhost |</p>
-<p>+——+———-+————————-+<br>为用户设置密码：<br>update mysql.user set password=password(‘<strong><em>*</em></strong>‘);<br>刷新权限生效：<br>flush privileges;</p>
-</blockquote>
-<h4 id="设置远程访问连接"><a href="#设置远程访问连接" class="headerlink" title="设置远程访问连接"></a><strong>设置远程访问连接</strong></h4><p>1.新建远程访问的用户</p>
-<blockquote>
-<p>create user ‘test’@’localhost’ IDENTIFIED BY ‘123456’;<br>2.为用户授权<br>方法一：UPDATE mysql.user SET Host = ‘%’ WHERE User= ‘需要设置的用户’ LIMIT 1;</p>
-<p>方法二： grant 权限 on mysql.user to 用户名@登录主机 identified by “密码”;<br>3.刷新权限<br>flush privileges;</p>
-<div>   为用户授予部分权限：</div><br><div>grant select,update on testDB.<em> to test@localhost identified by ‘1234’;</em></div><br><div></div><br><div>     授予一个用户所有数据库的某些权限：</div><br><div>grant select,delete,update,create,drop on .* to test@”%” identified by “1234”;</div><br><div></div><br><div>     删除用户：</div><br><div>Delete FROM user Where User=’test’ and Host=’localhost’;</div><br><div> 分配权限要执行执行刷新操作（flush privileges;）才能生效。</div>
-
-</blockquote>
-<h4 id="补充：如果是阿里云服务器，上面的操作后，远程还是无法访问，可登录阿里云控制台，在云服务安全组新增规则，"><a href="#补充：如果是阿里云服务器，上面的操作后，远程还是无法访问，可登录阿里云控制台，在云服务安全组新增规则，" class="headerlink" title="补充：如果是阿里云服务器，上面的操作后，远程还是无法访问，可登录阿里云控制台，在云服务安全组新增规则，"></a><strong>补充：如果是阿里云服务器，上面的操作后，远程还是无法访问，可登录阿里云控制台，在云服务安全组新增规则，</strong></h4><p>克隆一个规则出来并把端口号修改成mysql的3306，然后重启服务器。</p>
-<h4 id="可能遇到的问题："><a href="#可能遇到的问题：" class="headerlink" title="可能遇到的问题："></a><strong>可能遇到的问题：</strong></h4><p>1.cmake报错</p>
-<p>大部分是缺少组件比如boost_1_59_0，缺少组件安装即可</p>
-<p>2.mysql启动报错</p>
-<p>如果是报 ERROR! The server quit without updating PID file (/data/mysqldb/iZwz9hx16c6lym981sotzmZ.pid)这种问题，是my.cnf文件配置问题</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Linux/mysql//" class="article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/22/centos6-8-e7-bc-96-e8-af-91-e5-ae-89-e8-a3-85mysql-5-6-37/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -1776,8 +386,8 @@ $path = $this-&amp;gt;saveImage($thumbnail);
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
