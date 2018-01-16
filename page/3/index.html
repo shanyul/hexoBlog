@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shanyuliang.com">
-  <title>MySQL中的insert into ,insert ignore into, replace into等的区别与用法 | 舢禹的博客</title>
+  <title>舢禹的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mysql中常用的三种插入数据的语句:insert into表示插入数据，数据库会检查主键，如果出现重复会报错；replace into表示插入替换数据，需求表中有PrimaryKey，或者unique索引，如果数据库已经存在数据，则用新数据替换，如果没有数据效果则和insert into一样；insert ignore表示，如果中已经存在相同的记录，则忽略当前新数据； 1.insert igno">
-<meta name="keywords" content="mysql">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL中的insert into ,insert ignore into, replace into等的区别与用法">
-<meta property="og:url" content="http://shanyuliang.com/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/index.html">
+  <meta name="description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
+<meta name="keywords" content="php,mysql,前端,javascript,jquery,html5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="舢禹的博客">
+<meta property="og:url" content="http://shanyuliang.com/page/3/index.html">
 <meta property="og:site_name" content="舢禹的博客">
-<meta property="og:description" content="mysql中常用的三种插入数据的语句:insert into表示插入数据，数据库会检查主键，如果出现重复会报错；replace into表示插入替换数据，需求表中有PrimaryKey，或者unique索引，如果数据库已经存在数据，则用新数据替换，如果没有数据效果则和insert into一样；insert ignore表示，如果中已经存在相同的记录，则忽略当前新数据； 1.insert igno">
-<meta property="og:updated_time" content="2018-01-16T11:59:27.921Z">
+<meta property="og:description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL中的insert into ,insert ignore into, replace into等的区别与用法">
-<meta name="twitter:description" content="mysql中常用的三种插入数据的语句:insert into表示插入数据，数据库会检查主键，如果出现重复会报错；replace into表示插入替换数据，需求表中有PrimaryKey，或者unique索引，如果数据库已经存在数据，则用新数据替换，如果没有数据效果则和insert into一样；insert ignore表示，如果中已经存在相同的记录，则忽略当前新数据； 1.insert igno">
+<meta name="twitter:title" content="舢禹的博客">
+<meta name="twitter:description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
   
     <link rel="alternative" href="/atom.xml" title="舢禹的博客" type="application/atom+xml">
   
@@ -146,14 +145,16 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      MySQL中的insert into ,insert ignore into, replace into等的区别与用法
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/">MySQL中的insert into ,insert ignore into, replace into等的区别与用法</a>
     </h1>
   
 
@@ -182,27 +183,6 @@
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -233,84 +213,16 @@
 
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://shanyuliang.com/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/08/18/mysql-e5-bc-80-e5-90-af-e7-94-a8-e6-88-b7-e8-bf-9c-e7-a8-8b-e8-ae-bf-e9-97-ae-e6-9d-83-e9-99-90/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL开启用户远程访问权限
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">php time()和js date.getTime()的区别</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -330,14 +242,309 @@
 
 
 
-  
-  
-  
 
   
-
+    <article id="post-php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/">php time()和js date.getTime()的区别</a>
+    </h1>
   
 
+        
+        <a href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/" class="archive-article-date">
+  	<time datetime="2017-08-10T08:59:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>php 获得当前时间的时间戳函数为time() ;</p>
+<p>js  获得当前时间的时间戳函数为date.getTime();</p>
+<p>但是两者获得值并不相等，存在的关系为（php获得的时间戳*1000）：</p>
+<p>var time = new Date(parseInt(phptime)*1000)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/php/日常随笔//" class="article-tag-list-link color5">日常随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/">隐藏nginx及php版本号</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/" class="archive-article-date">
+  	<time datetime="2017-08-03T03:18:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="隐藏nginx版本号"><a href="#隐藏nginx版本号" class="headerlink" title="隐藏nginx版本号"></a>隐藏nginx版本号</h2><p>nginx版本号一般显示在两个地方，①第一个是HTTP header，有个Server:nginx/1.x.x类似会暴露Web服务器所用软件名称以及版本号，这个也是大多数Web服务器最容易暴露版本号的地方；②第二个是Nginx出错页面，比如404页面没有找到等，这是如果用户没有指定页面的话，那么Nginx自己的页面会有版本戳记。接下来我们就做隐藏操作：</p>
+<p>1.打开Nginx主配置文件：nginx.conf（我的文件位置 /etc/nginx/nginx.conf），找到server_tokens ，将off改为on即可</p>
+<pre>http {
+    # ...省略一些配置
+　　sendfile on;
+　　tcp_nopush on;
+　　keepalive_timeout 60;
+　　tcp_nodelay on;
+    server_tokens off; 　　#默认是注释掉的
+
+　　# ...省略一些配置
+}
+2.编辑php-fpm配置文件，如fastcgi.conf（我的跟nginx.conf同目录），打开文件：
+找到：
+    fastcgi_param SERVER_SOFTWARE nginx/$nginx_version;
+改为：
+    fastcgi_param SERVER_SOFTWARE nginx;
+3.重启nginx服务：
+# /etc/init.d/nginx reload 或 
+# servic nginx reload</pre>
+
+<h2 id="隐藏php版本号"><a href="#隐藏php版本号" class="headerlink" title="隐藏php版本号"></a>隐藏php版本号</h2><p>php版本号也是显示在HTTP header中，但配置并不是nginx控制，而是php配置文件即php.ini文件</p>
+<p>1.打开php.ini文件</p>
+<p>找到：</p>
+<p><strong>        expose_php = On</strong></p>
+<p>改为：</p>
+<p><strong>       expose_php = Off</strong></p>
+<p>2.重启php-fpm</p>
+<p>关闭PHP</p>
+<h1 id="killall-php-fpm"><a href="#killall-php-fpm" class="headerlink" title="killall php-fpm"></a>killall php-fpm</h1><p>php重启</p>
+<h1 id="usr-local-php-sbin-php-fpm-amp"><a href="#usr-local-php-sbin-php-fpm-amp" class="headerlink" title="/usr/local/php/sbin/php-fpm &amp;"></a>/usr/local/php/sbin/php-fpm &amp;</h1><p>最后打开浏览器，测试一下吧！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/nginx//" class="article-tag-list-link color1">nginx</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/nginx/php//" class="article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-php-e5-bc-80-e5-90-af-e7-9f-ad-e6-a0-87-e7-ad-be-e6-96-b9-e6-b3-95" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/02/php-e5-bc-80-e5-90-af-e7-9f-ad-e6-a0-87-e7-ad-be-e6-96-b9-e6-b3-95/">php开启短标签方法</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/02/php-e5-bc-80-e5-90-af-e7-9f-ad-e6-a0-87-e7-ad-be-e6-96-b9-e6-b3-95/" class="archive-article-date">
+  	<time datetime="2017-08-02T08:03:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果你搭建的是本地服务器，例如wamp，在安装目录找到使用的php版本目录打开编辑php.ini文件，修改配置为：short_open_tag = On，然后重启服务器即可；</p>
+<p>如果你的服务器是在云服务器上，通过shell工具操作，首先输入命令whereis php.ini 找到php配置所在位置，然后进行和本地相同的操作，然后重启php服务。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/02/php-e5-bc-80-e5-90-af-e7-9f-ad-e6-a0-87-e7-ad-be-e6-96-b9-e6-b3-95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
   
 
 
@@ -360,8 +567,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

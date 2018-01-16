@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shanyuliang.com">
-  <title>MySQL中的insert into ,insert ignore into, replace into等的区别与用法 | 舢禹的博客</title>
+  <title>Archives: 2017 | 舢禹的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mysql中常用的三种插入数据的语句:insert into表示插入数据，数据库会检查主键，如果出现重复会报错；replace into表示插入替换数据，需求表中有PrimaryKey，或者unique索引，如果数据库已经存在数据，则用新数据替换，如果没有数据效果则和insert into一样；insert ignore表示，如果中已经存在相同的记录，则忽略当前新数据； 1.insert igno">
-<meta name="keywords" content="mysql">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL中的insert into ,insert ignore into, replace into等的区别与用法">
-<meta property="og:url" content="http://shanyuliang.com/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/index.html">
+  <meta name="description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
+<meta name="keywords" content="php,mysql,前端,javascript,jquery,html5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="舢禹的博客">
+<meta property="og:url" content="http://shanyuliang.com/archives/2017/page/3/index.html">
 <meta property="og:site_name" content="舢禹的博客">
-<meta property="og:description" content="mysql中常用的三种插入数据的语句:insert into表示插入数据，数据库会检查主键，如果出现重复会报错；replace into表示插入替换数据，需求表中有PrimaryKey，或者unique索引，如果数据库已经存在数据，则用新数据替换，如果没有数据效果则和insert into一样；insert ignore表示，如果中已经存在相同的记录，则忽略当前新数据； 1.insert igno">
-<meta property="og:updated_time" content="2018-01-16T11:59:27.921Z">
+<meta property="og:description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL中的insert into ,insert ignore into, replace into等的区别与用法">
-<meta name="twitter:description" content="mysql中常用的三种插入数据的语句:insert into表示插入数据，数据库会检查主键，如果出现重复会报错；replace into表示插入替换数据，需求表中有PrimaryKey，或者unique索引，如果数据库已经存在数据，则用新数据替换，如果没有数据效果则和insert into一样；insert ignore表示，如果中已经存在相同的记录，则忽略当前新数据； 1.insert igno">
+<meta name="twitter:title" content="舢禹的博客">
+<meta name="twitter:description" content="主要从事php开发，对前端也有一定的了解，此博客记录了我的学习编程之路。">
   
     <link rel="alternative" href="/atom.xml" title="舢禹的博客" type="application/atom+xml">
   
@@ -146,68 +145,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      MySQL中的insert into ,insert ignore into, replace into等的区别与用法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/" class="archive-article-date">
+  	<time datetime="2017-08-18T04:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-18</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/">MySQL中的insert into ,insert ignore into, replace into等的区别与用法</a>
     </h1>
   
 
-        
-        <a href="/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/" class="archive-article-date">
-  	<time datetime="2017-08-18T04:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>mysql中常用的三种插入数据的语句:</strong><br>insert into表示插入数据，数据库会检查主键，<strong>如果出现重复会报错</strong>；<br>replace into表示插入替换数据，需求表中有PrimaryKey，或者unique索引，<strong>如果数据库已经存在数据，则用新数据替换</strong>，如果没有数据效果则和insert into一样；<br>insert ignore表示，如果中已经存在相同的记录，<strong>则忽略当前新数据</strong>；</p>
-<p>1.insert ignore into</p>
-<p>当插入数据时，如出现错误时，如重复数据，将不返回错误，只以警告形式返回。所以使用ignore请确保语句本身没有问题，否则也会被忽略掉。例如：</p>
-<p>INSERT IGNORE INTO books (name) VALUES (‘MySQL Manual’)</p>
-<p>2.on duplicate key update</p>
-<p>当primary或者unique重复时，则执行update语句，如update后为无用语句，如id=id，则同1功能相同，但错误不会被忽略掉。例如，为了实现name重复的数据插入不报错，可使用一下语句：</p>
-<p>INSERT INTO books (name) VALUES (‘MySQL Manual’) ON duplicate KEY UPDATE id = id</p>
-<p>3.insert … select … where not exist</p>
-<p>根据select的条件判断是否插入，可以不光通过primary 和unique来判断，也可通过其它条件。例如：</p>
-<p>INSERT INTO books (name) SELECT ‘MySQL Manual’ FROM dual WHERE NOT EXISTS (SELECT id FROM books WHERE id = 1)</p>
-<p>4.replace into</p>
-<p>如果存在primary or unique相同的记录，则先删除掉。再插入新记录。</p>
-<p>REPLACE INTO books SELECT 1, ‘MySQL Manual’ FROM books</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -219,7 +186,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -232,112 +199,175 @@
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://shanyuliang.com/2017/08/18/mysql-e4-b8-ad-e7-9a-84insert-into-insert-ignore-into-replace-into-e7-ad-89-e7-9a-84-e5-8c-ba-e5-88-ab-e4-b8-8e-e7-94-a8-e6-b3-95/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2017/08/18/mysql-e5-bc-80-e5-90-af-e7-94-a8-e6-88-b7-e8-bf-9c-e7-a8-8b-e8-ae-bf-e9-97-ae-e6-9d-83-e9-99-90/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL开启用户远程访问权限
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">php time()和js date.getTime()的区别</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/" class="archive-article-date">
+  	<time datetime="2017-08-10T08:59:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-10</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/10/php-time-e5-92-8cjs-date-gettime-e7-9a-84-e5-8c-ba-e5-88-ab/">php time()和js date.getTime()的区别</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/php/日常随笔//" class="article-tag-list-link color5">日常随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/" class="archive-article-date">
+  	<time datetime="2017-08-03T03:18:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/03/e9-9a-90-e8-97-8fnginx-e5-8f-8aphp-e7-89-88-e6-9c-ac-e5-8f-b7/">隐藏nginx及php版本号</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/nginx//" class="article-tag-list-link color1">nginx</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/nginx/php//" class="article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/02/php-e5-bc-80-e5-90-af-e7-9f-ad-e6-a0-87-e7-ad-be-e6-96-b9-e6-b3-95/" class="archive-article-date">
+  	<time datetime="2017-08-02T08:03:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/02/php-e5-bc-80-e5-90-af-e7-9f-ad-e6-a0-87-e7-ad-be-e6-96-b9-e6-b3-95/">php开启短标签方法</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
+
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2017/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><a class="page-number" href="/archives/2017/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
   
 
 
@@ -361,8 +391,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
